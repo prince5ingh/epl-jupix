@@ -5,7 +5,7 @@
  * Description: Alter Easy Property Listings for the Jupix format.
  * Author: Merv Barrett
  * Author URI: http://www.realestateconnected.com.au/
- * Version: 2.0.90
+ * Version: 2.0.91
  * Text Domain: epl-jupix
  * Domain Path: languages
  *

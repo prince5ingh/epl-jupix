@@ -7,7 +7,7 @@ Tags: extension, easy property listings, listings, widget
 Requires at least: 3.3
 Tested up to: 5.3.2
 
-Stable Tag: 2.0.0
+Stable Tag: 2.0.91
 
 License: GNU Version 2 or Any Later Version
 

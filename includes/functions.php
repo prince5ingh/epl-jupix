@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Sold STC Pricing Plain Value Filter
  *
  * @return      If the listing meta property_sold_stc is yes, return the label.
+ * @since 2.0.91 Sold STC listings can have sold property status as well.
  */
 function epl_jupix_sold_stc_price_plain_value( $price_plain_value ) {
 
@@ -36,7 +37,7 @@ function epl_jupix_sold_stc_price_plain_value( $price_plain_value ) {
 		'7' => 'Withdrawn',
 	);
 
-	if ( 'yes' == $property->get_property_meta( 'property_sold_stc' ) && 'sold' != $property->get_property_meta( 'property_status' ) ) {
+	if ( 'yes' == $property->get_property_meta( 'property_sold_stc' ) ) {
 		$price_plain_value = 'Sold STC';
 	}
 	return $price_plain_value;
@@ -48,6 +49,7 @@ add_filter( 'epl_get_price_plain_value', 'epl_jupix_sold_stc_price_plain_value' 
  * Sold STC Pricing Plain Value Filter
  *
  * @return      If the listing meta property_sold_stc is yes, return the label.
+ * @since 2.0.91 Sold STC listings can have sold property status as well.
  */
 function epl_jupix_sold_stc_price( $price ) {
 
@@ -66,7 +68,7 @@ function epl_jupix_sold_stc_price( $price ) {
 		'7' => 'Withdrawn',
 	);
 
-	if ( 'yes' == $property->get_property_meta( 'property_sold_stc' ) && 'sold' != $property->get_property_meta( 'property_status' ) ) {
+	if ( 'yes' == $property->get_property_meta( 'property_sold_stc' ) ) {
 		$label = 'Sold STC';
 		$price = '<div class="page-price under-offer-status sold-stc-status">' . $label . '</div>';
 	}
